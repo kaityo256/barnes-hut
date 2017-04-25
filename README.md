@@ -26,3 +26,8 @@ It requires cairo package. If you do not have it, just run
     $ sudo gem install cairo
 
 before execution.
+
+## References
+
+* [The Barnes-Hut Algorithm](http://arborjs.org/docs/barnes-hut)
+* J. Barnes & P. Hut, Nature. 324 (4): 446–449. [A hierarchical O(N log N) force-calculation algorithm](http://www.nature.com/nature/journal/v324/n6096/abs/324446a0.html) The original paper of the Barnes-Hut algorithm published in Nature.

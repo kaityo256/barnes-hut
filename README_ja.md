@@ -25,3 +25,8 @@ Japanese/ [English](README.md)
 分割後。
 
 ![barnes-hut.png](barnes-hut.png)
+
+# 参考文献
+
+* [The Barnes-Hut Algorithm](http://arborjs.org/docs/barnes-hut) これが一番わかりやすい解説だった。
+* J. Barnes & P. Hut, Nature. 324 (4): 446–449. [A hierarchical O(N log N) force-calculation algorithm](http://www.nature.com/nature/journal/v324/n6096/abs/324446a0.html) Natureに掲載された元論文。
