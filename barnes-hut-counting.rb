@@ -24,7 +24,8 @@ class Node
     count.each do |v|
       si.push sum
       sum = sum + v
-    end sc = Array.new(4) {0}
+    end
+    sc = Array.new(4) {0}
     temp.each do |i|
       ix = ((q[i].x - @x)/hs).to_i
       iy = ((q[i].y - @y)/hs).to_i
