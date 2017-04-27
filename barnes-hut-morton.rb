@@ -11,15 +11,6 @@ class BHTree
     ((3*key+1).bit_length+1)/2-1
   end
 
-  def parentkey(key)
-    return 0 if key == 0
-    level = key2level(key)
-    key = key - (4**level -  1)/3
-    key = key >> 2
-    key = key + (4**(level-1) -  1)/3
-    key
-  end
-
   def key2pos(key)
     x = 0.0
     y = 0.0
@@ -67,6 +58,16 @@ class BHTree
 end
 
 class BHTree
+
+  def parentkey(key)
+    return 0 if key == 0
+    level = key2level(key)
+    key = key - (4**level -  1)/3
+    key = key >> 2
+    key = key + (4**(level-1) -  1)/3
+    key
+  end
+
   def draw(key, context)
     context.set_source_rgb(0, 0, 0)
     key = parentkey(key)
@@ -106,7 +107,6 @@ def save_png(filename, size, q, mkey, tree)
   surface.write_to_png(filename)
 end
 
-tree = BHTree.new(256)
 
 Particle = Struct.new(:x, :y)
 srand(2)
@@ -119,6 +119,7 @@ q = []
 end
 
 mkey = Array.new(q.size)
+tree = BHTree.new(L)
 
 q.size.times do |i|
   tree.add(0,i,mkey,q)
